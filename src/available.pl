@@ -7,6 +7,6 @@ available(Item) :-
     Item, found(Item).
 available(Item) :- 
     Item,
-    findall(Requirement, requirement(Item, Requirement), Requirements),
+    findall(R, requirement(Item, R), Requirements),
     member(_, Requirements),
-    forall(member(R, Requirements), available(R)).
+    forall(member(R, Requirements), found(R)).

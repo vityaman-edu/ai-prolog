@@ -4,6 +4,7 @@
 :- use_module(reachable).
 :- use_module(available).
 :- use_module(progress).
+:- use_module(evil).
 
 print_fact(Fact) :-
     Fact, write('+ '), writeln(Fact).
@@ -34,6 +35,8 @@ print_fact(Fact) :-
 ?- print_fact(available(pickaxe('Gold'))).
 ?- print_fact(available(ore('Demonite'))).
 ?- print_fact(available(pickaxe('Nightmare'))).
+?- print_fact(available(ore('Crimtane'))).
+?- print_fact(available(pickaxe('Deathbringer'))).
 ?- nl.
 ?- writeln('Reachability: ').
 ?- print_fact(reachable(ore('Copper'))).
@@ -46,4 +49,6 @@ print_fact(Fact) :-
 ?- print_fact(reachable(pickaxe('Gold'))).
 ?- print_fact(reachable(ore('Demonite'))).
 ?- print_fact(reachable(pickaxe('Nightmare'))).
+?- print_fact(reachable(ore('Crimtane'))).
+?- print_fact(reachable(pickaxe('Deathbringer'))).
 ?- nl.

@@ -1,4 +1,8 @@
-:- module(pickaxe, [pickaxe/1, pickaxe_power/2]).
+:- module(pickaxe, [
+    pickaxe/1, 
+    pickaxe_power/2,
+    pickaxe_with_power/1
+]).
 
 pickaxe('Cactus').
 pickaxe('Copper').
@@ -37,3 +41,12 @@ pickaxe_power(pickaxe('Mythril'), 9).
 pickaxe_power(pickaxe('Orichalcum'), 9).
 pickaxe_power(pickaxe('Adamantite'), 10).
 pickaxe_power(pickaxe('Titanium'), 10).
+
+pickaxe_with_power(1).
+pickaxe_with_power(2).
+pickaxe_with_power(3).
+pickaxe_with_power(4).
+pickaxe_with_power(5).
+pickaxe_with_power(6).
+pickaxe_with_power(7).
+pickaxe_with_power(8).

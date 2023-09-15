@@ -22,10 +22,8 @@ requirement(pickaxe('Orichalcum'), ore('Orichalcum')).
 requirement(pickaxe('Adamantite'), ore('Adamantite')).
 requirement(pickaxe('Titanium'), ore('Titanium')).
 
-requirement(ore(Ore), pickaxe(Pickaxe)) :- 
-    ore_power(ore(Ore), OrePower),
-    pickaxe_power(pickaxe(Pickaxe), PickaxePower),
-    (PickaxePower < OrePower -> false ; true).
+requirement(ore(Ore), pickaxe_with_power(PickaxePower)) :-
+    ore_power(ore(Ore), PickaxePower).
 
 requirement(ore('Demonite'), evil_biome('Corruption')).
 requirement(ore('Crimtane'), evil_biome('Crimson')).
