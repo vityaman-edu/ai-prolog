@@ -26,6 +26,3 @@ requirement(ore(Ore), pickaxe_with_power(PickaxePower)) :-
     ore_power(ore(Ore), PickaxePower).
 
 requirement(ore(Ore), existing(ore(Ore))).
-
-requirement(ore('Demonite'), evil_biome('Corruption')).
-requirement(ore('Crimtane'), evil_biome('Crimson')).

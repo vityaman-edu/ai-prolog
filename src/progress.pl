@@ -10,14 +10,20 @@ found(existing(ore('Crimtane'))) :-
 found(existing(ore('Demonite'))) :- 
     found(evil_biome('Corruption')).
 
+found(existing(ore('Demonite'))).
+
 found(existing(ore('Tin'))).
 found(existing(ore('Iron'))).
 found(existing(ore('Silver'))).
 found(existing(ore('Gold'))).
 
+found(existing(ore('Hellstone'))).
+
 found(ore('Copper')).
 found(pickaxe('Copper')).
 found(pickaxe('Gold')).
+found(pickaxe('Deathbringer')).
+found(pickaxe('Molten')).
 
 found(pickaxe_with_power(Power)) :-
     found(pickaxe(Pickaxe)),
