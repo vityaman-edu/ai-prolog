@@ -6,4 +6,7 @@
 reachable(Item) :- 
     Item, available(Item).
 reachable(Item) :- 
-    Item, requirement(Item, Requirement), reachable(Requirement).
+    Item,
+    findall(Requirement, requirement(Item, Requirement), Requirements),
+    member(_, Requirements),
+    forall(member(R, Requirements), reachable(R)).

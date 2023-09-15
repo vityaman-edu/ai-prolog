@@ -1,7 +1,8 @@
 :- module(requirement, [requirement/2]).
 
-:- use_module(pickaxe, [pickaxe_power/2]).
-:- use_module(ore, [ore_power/2]).
+:- use_module(pickaxe).
+:- use_module(ore).
+:- use_module(evil).
 
 requirement(pickaxe('Copper'), ore('Copper')).
 requirement(pickaxe('Tin'), ore('Tin')).
@@ -25,3 +26,6 @@ requirement(ore(Ore), pickaxe(Pickaxe)) :-
     ore_power(ore(Ore), OrePower),
     pickaxe_power(pickaxe(Pickaxe), PickaxePower),
     (PickaxePower < OrePower -> false ; true).
+
+requirement(ore('Demonite'), evil_biome('Corruption')).
+requirement(ore('Crimtane'), evil_biome('Crimson')).
