@@ -1,8 +1,19 @@
 :- module(progress, [found/1]).
 
 :- use_module(pickaxe).
+:- use_module(ore).
 
 found(evil_biome('Crimson')).
+
+found(existing(ore('Crimtane'))) :- 
+    found(evil_biome('Crimson')).
+found(existing(ore('Demonite'))) :- 
+    found(evil_biome('Corruption')).
+
+found(existing(ore('Tin'))).
+found(existing(ore('Iron'))).
+found(existing(ore('Silver'))).
+found(existing(ore('Gold'))).
 
 found(ore('Copper')).
 found(pickaxe('Copper')).

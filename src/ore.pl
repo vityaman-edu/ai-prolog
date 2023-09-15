@@ -1,4 +1,4 @@
-:- module(ore, [ore/1, ore_power/2]).
+:- module(ore, [ore/1, ore_power/2, existing/1]).
 
 ore('Copper').
 ore('Tin').
@@ -21,6 +21,8 @@ ore('Adamantite').
 ore('Titanium').
 ore('Chlorophyte').
 ore('Luminite').
+
+existing(ore(Ore)) :- ore(Ore).
 
 ore_power(ore('Copper'), 1).
 ore_power(ore('Tin'), 1).
