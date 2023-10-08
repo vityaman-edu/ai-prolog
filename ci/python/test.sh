@@ -5,3 +5,4 @@ cd ../..
 echo "[ai] Running Python Knowledge base..."
 python src/test_parse.py
 python src/test_terraria.py
+python src/test_fuzzing.py

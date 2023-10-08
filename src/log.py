@@ -24,3 +24,12 @@ class Log:
         file = os.path.split(function.co_filename)[-1][:-3]
         line = function.co_firstlineno
         logging.debug(f'{file}:{name}:{line}: {message}')
+
+    @classmethod
+    def info(cls, message: str):
+        import inspect
+        function = inspect.currentframe().f_back.f_code
+        name = function.co_name
+        file = os.path.split(function.co_filename)[-1][:-3]
+        line = function.co_firstlineno
+        logging.info(f'{file}:{name}:{line}: {message}')
