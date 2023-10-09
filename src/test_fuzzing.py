@@ -23,6 +23,9 @@ class FuzzingTest(TestCase):
             'Я честно нашел Iron ore',
             'Я честно нашел Iron pickaxe',
             'Я честно нашел Copper pickaxe',
+            'А не пора ли мне в хардмод?',
+            'Смогу усидеть на двух стульях',
+            'Я тут сломаю все',
         ])
 
     def generate_stupid(self) -> str:
@@ -39,10 +42,14 @@ class FuzzingTest(TestCase):
                 lambda: 'честно',
                 lambda: 'я был у',
                 lambda: 'поблизости',
+                lambda: 'пора в хардмод',
+                lambda: 'на двух стульях',
+                lambda: 'сломать все',
                 lambda: 'Copper ore',
                 lambda: 'Iron ore',
                 lambda: 'Iron pickaxe',
                 lambda: 'Copper pickaxe',
+
             ])() + ' '
         return result
 

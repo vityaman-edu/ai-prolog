@@ -96,6 +96,18 @@ def on_action_explore(terraria: Terraria, groups):
     ])
 
 
+def on_check_is_ready_for_hardmode(terraria: Terraria, groups):
+    raise NotImplementedError
+
+
+def on_check_is_able_to_craft_both_evil_pickaxe(terraria: Terraria, groups):
+    raise NotImplementedError
+
+
+def on_check_is_able_to_break_all_explored_ores(terraria: Terraria, groups):
+    raise NotImplementedError
+
+
 def on_error(terraria: Terraria, groups):
     return random.choice([
         'Ничего не понял, но очень интересно! 😁',
@@ -114,6 +126,9 @@ class Feedback:
             r'.*(ну+)?.*я( же )? .*(честно|правда).*наше+л (\w+) (\w+).*': on_action_cheat,
             r'.*я.*(нашел|сделал|взял) (\w+) (\w+).*': on_action_take,
             r'.*я .*был (прямо? )?((у)|(рядом с)|(поблизости к)) ([a-zA-z_]+) ([a-zA-z_]+).*': on_action_explore,
+            r'.*пора.* в хардмод.*': on_check_is_ready_for_hardmode,
+            r'.*на двух стульях.*': on_check_is_able_to_craft_both_evil_pickaxe,
+            r'.*слом(ать|аю).* все.*': on_check_is_able_to_break_all_explored_ores,
         }
         self.fallback = on_error
 

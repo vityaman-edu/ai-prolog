@@ -61,3 +61,12 @@ class Terraria:
                 if item.is_existing:
                     yield item
         return set(generate())
+
+    def is_ready_for_hardmode(self) -> bool:
+        raise NotImplementedError
+    
+    def is_able_to_craft_both_evil_pickaxe(self) -> bool:
+        raise NotImplementedError
+    
+    def is_able_to_break_all_explored_ores(self) -> bool:
+        raise NotImplementedError
