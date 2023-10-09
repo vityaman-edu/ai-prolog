@@ -24,6 +24,7 @@ class FuzzingTest(TestCase):
             'Я честно нашел Iron pickaxe',
             'Я честно нашел Copper pickaxe',
             'А не пора ли мне в хардмод?',
+            # FIXME: disabled as it breaks tests
             # 'Смогу усидеть на двух стульях',
             'Я тут сломаю все',
         ])
@@ -43,6 +44,7 @@ class FuzzingTest(TestCase):
                 lambda: 'я был у',
                 lambda: 'поблизости',
                 lambda: 'пора в хардмод',
+                # FIXME: disabled as it breaks tests
                 # lambda: 'на двух стульях',
                 lambda: 'сломать все известные руды',
                 lambda: 'Copper ore',

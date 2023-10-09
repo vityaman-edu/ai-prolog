@@ -1,0 +1,341 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{caption}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{listings}
+
+\pgfplotsset{compat=1.18}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = blue,
+  filecolor  = magenta,      
+  urlcolor   = darkgray,
+  pdftitle   = {
+    ai-ontology-report-smirnov-victor-p33131
+  },
+}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.99,0.99,0.99}
+\lstdefinestyle{codestyle}{
+  backgroundcolor=\color{backcolour},   
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+\lstset{style=codestyle}
+
+\begin{document}
+
+\begin{titlepage}
+  \begin{center}
+    \begin{spacing}{1.4}
+      \large{Университет ИТМО} \\
+      \large{Факультет программной инженерии и компьютерной техники} \\
+    \end{spacing}
+    \vfill
+    \textbf{
+      \huge{Системы искусственного интеллекта.} \\
+      \huge{Лабораторные работы 1-3.} \\
+      \huge{Базы знаний и онтологии} \\
+    }
+  \end{center}
+  \vfill
+  \begin{center}
+    \begin{tabular}{r l}
+      Группа : & P33131                  \\
+      Студент: & Смирнов Виктор Игоревич \\
+      Тема   : & Игра Terraria           \\
+    \end{tabular}
+  \end{center}
+  \vfill
+  \begin{center}
+    \begin{large}
+      2023
+    \end{large}
+  \end{center}
+\end{titlepage}
+
+\section*{Ключевые слова}
+База знаний, Онтология.
+
+\tableofcontents
+
+\section{Введение}
+
+\subsection{Цели}
+
+Целью лабораторных работ первого модуля
+была разработка базы знаний на базе языка
+Prolog, а также фронтэнда к ней на Python для
+взаимодейстия пользователя с системой.
+Прежде всего это был просто образовательный
+проект с целью ознакомления с онтологиями.
+
+\subsection{Значимость}
+
+Значимость заключается в полученных мною знаний
+и создании автоматиеского чат-бота для получения
+персональных рекомендаций по игре Terraria.
+
+\section{Анализ требований}
+
+\subsection{Требования к фронтэнду}
+
+\begin{enumerate}
+  \item Фронтэнд должен обрабатывать запросы пользователя и выдавать
+        на них ответы, соответвующие состоянию базы знаний.
+  \item Фронтэнд должен быть устойчив к неккоректному
+        пользовательскому вводу.
+  \item Фронтэнд должен быть реализован на языке Python.
+  \item Фронтэнд должен иметь CLI интерфейс.
+  \item Фронтэнд должен инициировать взаимодейстие с базой знаний.
+\end{enumerate}
+
+\subsection{Требования к базе знаний}
+
+\begin{enumerate}
+  \item База зананий должна быть реализована на базе системы Prolog.
+  \item База знаний должна содержать информацию об игре Terraria.
+  \item База знаний должна содержать факты и правила различной сложности.
+\end{enumerate}
+
+
+\section{Изучение основных концепций и инструментов}
+
+\subsection{Обзор основных концепций баз знаний и онтологий}
+
+По определению из википедии база знаний - база данных, содержащая
+правила вывода и информацию о знаниях в некоторой предметной
+области.
+
+Онтология -- иерархический способ представления в базе знаний
+набора понятий и их связей.
+
+Важно, что онтология сама по себе содержит только абстрактные
+понятия и связи. Она становится базой знаний, только когда там
+появляются конкретные объекты.
+
+Базы знаний способны делать автоматические умозаключения об уже
+имеющихся или вновь вводимых фактах и тем самым производить
+как бы осмысленную обработку информации.
+
+База знаний содержит правила вывода -- логические конструкции,
+определяющие отношения между фактами и позволяющие делать выводы.
+
+База знаний обрабатывает запросы к себе, выдавая информацию,
+удовлетворяющую заданным в запросе условиям.
+
+Онтологии состоят из
+\begin{enumerate}
+  \item экземпляров - конкретных или абстрактных объектов,
+  \item понятий - абстрактных наборов объектов,
+  \item атрибутов - некоторых значений, связанных с конкретным экземпляром,
+  \item отношений - завсимостей между объектами онтологии.
+\end{enumerate}
+
+Онтология позволяет формализовать факты и правила и обрабатывать их
+автоматически, например, в системах искусственного интеллекта или
+для анализа данных.
+
+Онтология задает смысл данных, а база знаний их хранит и предоставляет
+доступ.
+
+\subsection{Prolog и его возможностей для разработки систем искусственного интеллекта}
+
+Prolog (Programming in Logic) - это декларативный язык
+программирования, который используется для решения задач
+искусственного интеллекта и логического программирования.
+Prolog основан на логике первого порядка и предназначен для
+решения задач, в которых логические отношения и правила
+играют ключевую роль.
+
+\subsection{Инструменты и библиотеки, подходящие для работы с базами знаний и онтологиями на Prolog}
+
+.
+
+Инструмент для Базы знаний -
+https://swish.swi-prolog.org/.
+
+Инструмент для Онтологий -
+https://protege.stanford.edu/.
+
+Инструмент для взаимодейстия с базой знаний -
+https://github.com/yuce/pyswip/.
+
+
+\section{Создание правил и логики вывода для принятия решений на основе базы знаний и онтологии}
+
+\subsection{Создание правил и логики вывода для принятия решений на основе базы знаний и онтологии}
+
+Была составлена база знаний на языке Prolog.
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Достижения игрока}
+]{../res/achievements.pl}
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Доступность предмета игроку в один шаг}
+]{../res/available.pl}
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Доступность предмета игроку в несколько шагов}
+]{../res/reachable.pl}
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Злые биомы Террарии}
+]{../res/evil.pl}
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Руды Террарии}
+]{../res/ore.pl}
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Кирки Террарии}
+]{../res/pickaxe.pl}
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Прогресс игрока}
+]{../res/progress.pl}
+
+\lstinputlisting[
+  language={Prolog},
+  caption={Требования для добычи предметов}
+]{../res/requirement.pl}
+
+\subsection{Тестирование и отладка системы, обеспечение ее функциональности и эффективности}
+
+Была написана система принятия решений в виде CLI чат-бота на
+языке Python.
+
+Запросы к базе зананий выполнялись с помощью библиотеки pyswip.
+
+\lstinputlisting[
+  language={Python},
+  caption={Слой взаимодейстия с pyswip}
+]{../src/prolog.py}
+
+Также в Python была выражена часть предметной области для
+функции для построения запросов к серверу Prolog и
+удобного тестирования.
+
+\lstinputlisting[
+  language={Python},
+  caption={Доменная область}
+]{../src/dsl.py}
+
+Для разбора ответов сервера Prolog был сделан простенький
+парсер выражений на основе Python Lark.
+
+\lstinputlisting[
+  language={Python},
+  caption={Парсер частного случая выражения на Prolog}
+]{../src/parse.py}
+
+На базе описанного выше удалось спрятать Prolog за слоем
+бизнес логики.
+
+\lstinputlisting[
+  language={Python},
+  caption={Бизнес-логика}
+]{../src/terraria.py}
+
+Слой бизнес логики используется слоем принятия и обработки
+текстовых запросов.
+
+\lstinputlisting[
+  language={Python},
+  caption={Слой принятия и обработки текстовых запросов}
+]{../src/feedback.py}
+
+Ну и вишенкой на торте стало CLI приложение.
+
+\lstinputlisting[
+  language={Python},
+  caption={Аргументы командной строки}
+]{../src/args.py}
+
+\lstinputlisting[
+  language={Python},
+  caption={Главный цикл}
+]{../src/main.py}
+
+Програмнное обеспечение всегда страшно разрабатывать без тестов,
+поэтому без них не обошлось.
+
+Было проведено модульное тестирование парсера.
+
+\lstinputlisting[
+  language={Python},
+  caption={Тесты для парсера}
+]{../src/test_parse.py}
+
+Также слегка проверен был слой бизнес-логики.
+
+\lstinputlisting[
+  language={Python},
+  caption={Тесты для парсера}
+]{../src/test_terraria.py}
+
+Чтобы быть более уверенным в корректной обработки
+даже неправильных запросов пользователя была реализована
+некоторая пародия на фаззинг-тестирование.
+
+\lstinputlisting[
+  language={Python},
+  caption={Фаззинг-тесты для чат-бота}
+]{../src/test_fuzzing.py}
+
+\subsection{Пример вывода программы}
+
+\lstinputlisting[
+  caption={Пример диалога с чат-ботом}
+]{../res/example.txt}
+
+\section{Вывод}
+Вывод
+
+\begin{thebibliography}{9}
+
+  \bibitem{calc-math-demidovich-maron}
+  Б.П. Демидович, И.А. Марон Основы вычислительной математики:
+  учебное пособие — 1966 год.
+
+\end{thebibliography}
+
+\end{document}
