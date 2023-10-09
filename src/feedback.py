@@ -60,7 +60,11 @@ def on_action_take(terraria: Terraria, groups):
         if type not in ('ore', 'pickaxe'):
             return 'Стоп! Можно брать только ore или pickaxe!'
         terraria.take(f'{type}(\'{name}\')')
-        return f'{emotion()}! Рад за тебя, милаш! 😚'
+        return random.choice([
+            f'{emotion()}! Рад за тебя, милаш! 😚',
+            f'Ах, ты ж моя молодчинка',
+            f'{emotion()}! Крутышка!',
+        ])
     except TerrariaException as e:
         return random.choice([
             f'Оййй 🤕. Ну ты чего? Как же можно взять недоступное?',
@@ -97,19 +101,47 @@ def on_action_explore(terraria: Terraria, groups):
 
 
 def on_check_is_ready_for_hardmode(terraria: Terraria, groups):
-    raise NotImplementedError
+    if terraria.is_ready_for_hardmode():
+        return random.choice([
+            f'{emotion()}! Молодец, теперь ты можешь отправиться во второй модуль!',
+            'Да, почему бы и нет, валяй, чибрик!',
+        ])
+    return random.choice([
+        'Не торопись, сначала тебе нужна адская кирка.',
+        'К сожалению, ты пока не готов(а)',
+        'Да какой тебе хардмод, милаш?',
+        'Не торопи жизнь',
+    ])
 
 
 def on_check_is_able_to_craft_both_evil_pickaxe(terraria: Terraria, groups):
-    raise NotImplementedError
+    if terraria.is_able_to_craft_both_evil_pickaxe():
+        return random.choice([
+            'Как вы этого добились?',
+            f'{emotion()}! Можешь!'
+        ])
+    return random.choice([
+        'Кажется, что нет.',
+        'Не-а',
+        '😔',
+    ])
 
 
 def on_check_is_able_to_break_all_explored_ores(terraria: Terraria, groups):
-    raise NotImplementedError
+    if terraria.is_able_to_break_all_explored_ores():
+        return random.choice([
+            'Да, ты можешь',
+            'Угу',
+        ])
+    return random.choice([
+        'Бро, нужно тренироваться',
+        'Нужно больше кирок королю кирок',
+    ])
 
 
 def on_error(terraria: Terraria, groups):
     return random.choice([
+        'Со мной нужно поговорить через чат. Чат я дала. Чтобы знать, что спрашивать, нужен гайд. Гайд я не дам.',
         'Ничего не понял, но очень интересно! 😁',
         'Прости... я тебя не понимаю...😔',
         'Не пон, попробуй перефразировать, пожалуйста 🧐'
@@ -124,11 +156,11 @@ class Feedback:
             r'.*успел.*(повидать|увидеть).*': on_show_places,
             r'.*(доступно|я могу|способен).*': on_show_available,
             r'.*(ну+)?.*я( же )? .*(честно|правда).*наше+л (\w+) (\w+).*': on_action_cheat,
-            r'.*я.*(нашел|сделал|взял) (\w+) (\w+).*': on_action_take,
+            r'.*(нашел|собрал|сделал|взял|добыл) (\w+) (\w+).*': on_action_take,
             r'.*я .*был (прямо? )?((у)|(рядом с)|(поблизости к)) ([a-zA-z_]+) ([a-zA-z_]+).*': on_action_explore,
             r'.*пора.* в хардмод.*': on_check_is_ready_for_hardmode,
             r'.*на двух стульях.*': on_check_is_able_to_craft_both_evil_pickaxe,
-            r'.*слом(ать|аю).* все.*': on_check_is_able_to_break_all_explored_ores,
+            r'.*слом(ать|аю).* все известные руды.*': on_check_is_able_to_break_all_explored_ores,
         }
         self.fallback = on_error
 

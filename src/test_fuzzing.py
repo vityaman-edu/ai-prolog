@@ -44,7 +44,7 @@ class FuzzingTest(TestCase):
                 lambda: 'поблизости',
                 lambda: 'пора в хардмод',
                 lambda: 'на двух стульях',
-                lambda: 'сломать все',
+                lambda: 'сломать все известные руды',
                 lambda: 'Copper ore',
                 lambda: 'Iron ore',
                 lambda: 'Iron pickaxe',

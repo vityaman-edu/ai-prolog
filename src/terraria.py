@@ -63,10 +63,13 @@ class Terraria:
         return set(generate())
 
     def is_ready_for_hardmode(self) -> bool:
-        raise NotImplementedError
-    
+        statement = "achived('Can break all found existing ores')"
+        return self._state.is_proven(statement)
+
     def is_able_to_craft_both_evil_pickaxe(self) -> bool:
-        raise NotImplementedError
-    
+        statement = "achived('Theoretically can craft both Nightmare and Deathbringer')"
+        return self._state.is_proven(statement)
+
     def is_able_to_break_all_explored_ores(self) -> bool:
-        raise NotImplementedError
+        statement = "achived('Is ready to hardmode')"
+        return self._state.is_proven(statement)
