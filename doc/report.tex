@@ -246,94 +246,93 @@ https://github.com/yuce/pyswip/.
 
 Запросы к базе зананий выполнялись с помощью библиотеки pyswip.
 
-\lstinputlisting[
-  language={Python},
-  caption={Слой взаимодейстия с pyswip}
-]{../src/prolog.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/prolog.py
 
 Также в Python была выражена часть предметной области для
 функции для построения запросов к серверу Prolog и
 удобного тестирования.
 
-\lstinputlisting[
-  language={Python},
-  caption={Доменная область}
-]{../src/dsl.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/dsl.py
 
 Для разбора ответов сервера Prolog был сделан простенький
 парсер выражений на основе Python Lark.
 
-\lstinputlisting[
-  language={Python},
-  caption={Парсер частного случая выражения на Prolog}
-]{../src/parse.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/parse.py
 
 На базе описанного выше удалось спрятать Prolog за слоем
 бизнес логики.
 
-\lstinputlisting[
-  language={Python},
-  caption={Бизнес-логика}
-]{../src/terraria.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/terraria.py
 
 Слой бизнес логики используется слоем принятия и обработки
 текстовых запросов.
 
-\lstinputlisting[
-  language={Python},
-  caption={Слой принятия и обработки текстовых запросов}
-]{../src/feedback.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/feedback.py
 
 Ну и вишенкой на торте стало CLI приложение.
 
-\lstinputlisting[
-  language={Python},
-  caption={Аргументы командной строки}
-]{../src/args.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/args.py
 
-\lstinputlisting[
-  language={Python},
-  caption={Главный цикл}
-]{../src/main.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/main.py
 
 Програмнное обеспечение всегда страшно разрабатывать без тестов,
 поэтому без них не обошлось.
 
 Было проведено модульное тестирование парсера.
 
-\lstinputlisting[
-  language={Python},
-  caption={Тесты для парсера}
-]{../src/test_parse.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/test_parse.py
 
 Также слегка проверен был слой бизнес-логики.
 
-\lstinputlisting[
-  language={Python},
-  caption={Тесты для парсера}
-]{../src/test_terraria.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/test_terraria.py
 
 Чтобы быть более уверенным в корректной обработки
 даже неправильных запросов пользователя была реализована
 некоторая пародия на фаззинг-тестирование.
 
-\lstinputlisting[
-  language={Python},
-  caption={Фаззинг-тесты для чат-бота}
-]{../src/test_fuzzing.py}
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/src/test_fuzzing.py
 
 \subsection{Пример вывода программы}
 
+https://github.com/vityaman-edu/ai-prolog/blob/trunk/res/example.txt
 
 
-\section{Вывод}
-Вывод
+\section{Оценка и интерпретация результатов}
+
+Наша система соответвуюет заявленным требованиям.
+
+Цель была достигнута - мы разработали CLI чат-бота предоставляющего
+доступ к базе знаний на языке Prolog, он помогает человеку
+играть в игру Terraria, советуя, какие шаги предпринять и
+давая комментарии по поводу прогресса в игре.
+
+В дальнейшем можно расширять базу знаний, добавлять новые аспекты
+игры. Расширить вариативность как ввода, так и вывода. Сделать
+бота более гибким и похожим на человека. Также следует исправить
+существующие проблемы приложения (баги) и повысить тестовое покрытие,
+доработать фаззинг.
+
+\section{Заключение}
+
+Разработанное приложение поможет игрокам в Terraria понять
+правила игры и получить подсказки.
 
 \begin{thebibliography}{9}
 
-  \bibitem{calc-math-demidovich-maron}
-  Б.П. Демидович, И.А. Марон Основы вычислительной математики:
-  учебное пособие — 1966 год.
+  \bibitem{ontology}
+  https://ru.wikipedia.org/wiki/%D0%9E%D0%BD%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_(%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)
+
+  \bibitem{knowledge}
+  https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B7%D0%B0_%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9
+
+  \bibitem{prolog}
+  https://www.swi-prolog.org/
+
+  \bibitem{protege}
+  https://protege.stanford.edu/
+
+  \bibitem{pyswip}
+  https://github.com/yuce/pyswip
 
 \end{thebibliography}
 
