@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#b -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#b"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#breakable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#breakable">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#b"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#breaks"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#breaks -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#breaks">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#b"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#can_break -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#can_break">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#h"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#craftable_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#craftable_from">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#b"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#h -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#h"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#has">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#h"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#requirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#requirement">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#b"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#available_for_player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#available_for_player">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#breakable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#in_player"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#craftable_from"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#in_player"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#in_player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#in_player">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#next -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#next">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#available_for_player"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#in_player"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#player"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#reachable_by_player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#reachable_by_player">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#breakable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#reachable_by_player"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#craftable_from"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#reachable_by_player"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#item"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_o -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_o">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_p"/>
+        <untitled-ontology-2:requirement rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_p -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_p">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#reachable_by_player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_o -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_o">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_p"/>
+        <untitled-ontology-2:requirement rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_p -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_p">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_o -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_o">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#in_player"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_p"/>
+        <untitled-ontology-2:requirement rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_p -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_p">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#player -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#player">
+        <untitled-ontology-2:has rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#copper_p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_o -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_o">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#ore"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#gold_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#iron_p"/>
+        <untitled-ontology-2:breakable rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_p"/>
+        <untitled-ontology-2:requirement rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_p -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#silver_p">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vityaman/ontologies/2023/9/untitled-ontology-2#pickaxe"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
