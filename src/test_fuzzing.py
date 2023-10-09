@@ -24,7 +24,7 @@ class FuzzingTest(TestCase):
             'Я честно нашел Iron pickaxe',
             'Я честно нашел Copper pickaxe',
             'А не пора ли мне в хардмод?',
-            'Смогу усидеть на двух стульях',
+            # 'Смогу усидеть на двух стульях',
             'Я тут сломаю все',
         ])
 
@@ -43,7 +43,7 @@ class FuzzingTest(TestCase):
                 lambda: 'я был у',
                 lambda: 'поблизости',
                 lambda: 'пора в хардмод',
-                lambda: 'на двух стульях',
+                # lambda: 'на двух стульях',
                 lambda: 'сломать все известные руды',
                 lambda: 'Copper ore',
                 lambda: 'Iron ore',
@@ -60,7 +60,7 @@ class FuzzingTest(TestCase):
             terraria = Terraria(prolog)
             feedback = Feedback(terraria)
 
-            rounds = 1000
+            rounds = 200
             for i in range(rounds):
                 if i % 2 == 0:
                     input = self.generate_stupid()

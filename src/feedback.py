@@ -169,7 +169,11 @@ class Feedback:
             match = re.match(pattern, input, re.IGNORECASE)
             if match is None:
                 continue
-            return self.patterns[pattern](
-                self.terraria, match.groups())
+            try:
+                return self.patterns[pattern](
+                    self.terraria, match.groups())
+            except Exception as e:
+                print('Error', e)
+                return 'Я умираю, прости... Прощай, друг! 🤧'
         else:
             return self.fallback(self.terraria, None)
